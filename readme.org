@@ -1,0 +1,3 @@
+#+title: Docker image for artifacts of paper "On the Real-World Effectiveness of Static Bug Detectors at Finding Null Pointer Exceptions"
+
+Original artifact repo: [[https://github.com/ucd-plse/Static-Bug-Detectors-ASE-Artifact][Static-Bug-Detectors-ASE-Artifact]].
