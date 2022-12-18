@@ -27,6 +27,11 @@ RUN apt-get update && \
 COPY init.sh /root/
 RUN cd /root && bash init.sh && rm init.sh
 
+# defects4j dependencies
+RUN apt-get update && apt-get -y install cpanminus && \
+    cd /tmp && git clone https://github.com/rjust/defects4j.git && \
+    cd defects4j && cpanm --installdeps . && cd / && rm -rf /tmp/defects4j
+
 # RUN sudo su thebesttv -c "cd ~/ && \
 #     git clone https://github.com/ucd-plse/Static-Bug-Detectors-ASE-Artifact.git && \
 #     cd Static-Bug-Detectors-ASE-Artifact && \
