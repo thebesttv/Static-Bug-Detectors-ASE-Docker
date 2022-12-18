@@ -35,6 +35,9 @@ RUN apt-get update && apt-get -y install cpanminus && \
 RUN apt-get update && apt-get -y install \
         maven
 
+# BugSwarm
+RUN pip3 install bugswarm-client
+
 RUN sudo su thebesttv -c "cd ~/ && \
     git clone https://github.com/ucd-plse/Static-Bug-Detectors-ASE-Artifact.git && \
     cd Static-Bug-Detectors-ASE-Artifact && \
