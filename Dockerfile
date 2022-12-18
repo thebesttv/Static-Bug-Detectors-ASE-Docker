@@ -14,6 +14,11 @@ FROM ubuntu:20.04
 #         'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse' \
 #         'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse'
 
+# set time zone to Los Angeles, taken from
+# https://github.com/BugSwarm/bugswarm/blob/master/spawner/Dockerfile
+RUN ln -snf /usr/share/zoneinfo/America/Los_Angeles /etc/localtime && \
+    echo America/Los_Angeles > /etc/timezone
+
 RUN apt-get update && \
     apt-get -y install \
         apt-transport-https ca-certificates \
