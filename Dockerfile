@@ -1,9 +1,9 @@
 FROM ubuntu:20.04
 
-# 对apt加入https支持, 并使用清华源 (使用 printf 打印多行)
-# https://unix.stackexchange.com/a/263803
-# https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
-
+# Add https support to apt and use TUNA mirror (printf is used to print
+# multiple lines).
+#   https://unix.stackexchange.com/a/263803
+#   https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
 # RUN apt-get update && \
 #     apt-get -y install \
 #         apt-transport-https ca-certificates \
