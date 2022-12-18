@@ -20,6 +20,8 @@ echo "$username:U6aMy0wojraho" | chpasswd -e
 # https://askubuntu.com/a/147265
 echo "$username ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
+echo 'export PATH=$PATH:/home/thebesttv/Static-Bug-Detectors-ASE-Artifact/analyzers/defects4j/framework/bin' >> /etc/profile
+
 ################################################################
 # Generate the same pair of host keys, so that each creation of the
 # image remains the same.  To remove the original set of host keys and
