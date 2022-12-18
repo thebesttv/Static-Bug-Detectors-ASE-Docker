@@ -25,7 +25,7 @@ RUN apt-get update && \
         curl unzip gnupg lsb-release \
         vim bash-completion sudo openssh-server \
         python3 python3-pip \
-        openjdk-8-jdk \
+        openjdk-8-jdk maven \
         subversion git \
         docker.io
 
@@ -36,9 +36,6 @@ RUN cd /root && bash init.sh && rm init.sh
 RUN apt-get update && apt-get -y install cpanminus && \
     cd /tmp && git clone https://github.com/rjust/defects4j.git && \
     cd defects4j && cpanm --installdeps . && cd / && rm -rf /tmp/defects4j
-
-RUN apt-get update && apt-get -y install \
-        maven
 
 # BugSwarm
 RUN pip3 install bugswarm-client
