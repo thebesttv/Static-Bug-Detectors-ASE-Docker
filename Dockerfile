@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:20.04
 
 # 对apt加入https支持, 并使用清华源 (使用 printf 打印多行)
 # https://unix.stackexchange.com/a/263803

@@ -1,8 +1,8 @@
 # allow root login using password
-sed -i 's/^PermitRootLogin prohibit-password$/PermitRootLogin yes/' \
+sed -i 's/^.*PermitRootLogin prohibit-password$/PermitRootLogin yes/' \
     /etc/ssh/sshd_config
 # allow empty password
-sed -i 's/^PermitEmptyPasswords no$/PermitEmptyPasswords yes/' \
+sed -i 's/^.*PermitEmptyPasswords no$/PermitEmptyPasswords yes/' \
     /etc/ssh/sshd_config
 
 username=thebesttv
