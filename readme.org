@@ -1,3 +1,12 @@
 #+title: Docker image for artifacts of paper "On the Real-World Effectiveness of Static Bug Detectors at Finding Null Pointer Exceptions"
 
 Original artifact repo: [[https://github.com/ucd-plse/Static-Bug-Detectors-ASE-Artifact][Static-Bug-Detectors-ASE-Artifact]].
+
+Use [[file:run-docker.sh][run-docker.sh]] to start the Docker container:
+#+begin_src bash
+  ./run-docker.sh
+#+end_src
+And then, in another terminal, ssh to the running container:
+#+begin_src bash
+  ssh -p 50022 thebesttv@localhost
+#+end_src
