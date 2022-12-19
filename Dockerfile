@@ -42,7 +42,7 @@ RUN apt-get update && apt-get -y install cpanminus && \
 RUN pip3 install bugswarm-client beautifulsoup4
 
 RUN sudo su thebesttv -c "cd ~/ && \
-    git clone https://github.com/ucd-plse/Static-Bug-Detectors-ASE-Artifact.git && \
+    git clone https://github.com/thebesttv/Static-Bug-Detectors-ASE-Artifact.git && \
     cd Static-Bug-Detectors-ASE-Artifact && \
     bash analyzers/init_env.sh |& tee ~/log-init_env"
 
