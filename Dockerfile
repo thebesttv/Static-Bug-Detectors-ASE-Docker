@@ -27,7 +27,8 @@ RUN apt-get update && \
         python3 python3-pip \
         openjdk-8-jdk maven \
         subversion git \
-        docker.io
+    && \
+    curl -fsSL https://get.docker.com | sh -
 
 COPY init.sh /root/
 RUN cd /root && bash init.sh && rm init.sh
