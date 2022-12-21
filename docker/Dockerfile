@@ -11,7 +11,7 @@ RUN apt-get update && \
         curl unzip gnupg lsb-release \
         vim bash-completion sudo openssh-server \
         python3 python3-pip \
-        openjdk-8-jdk maven \
+        openjdk-8-jdk maven ant \
         subversion git \
     && \
     curl -fsSL https://get.docker.com | sh -
