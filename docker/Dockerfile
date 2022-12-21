@@ -9,7 +9,7 @@ RUN apt-get update && \
     apt-get -y install \
         apt-transport-https ca-certificates \
         curl unzip gnupg lsb-release \
-        vim bash-completion sudo openssh-server \
+        vim bash-completion sudo openssh-server tree htop tmux \
         python3 python3-pip \
         openjdk-8-jdk maven ant \
         subversion git \
