@@ -26,7 +26,7 @@ RUN apt-get update && apt-get -y install cpanminus && \
     cd defects4j && cpanm --installdeps . && cd / && rm -rf /tmp/defects4j
 
 # BugSwarm & parsing
-RUN pip3 install bugswarm-client beautifulsoup4
+RUN pip3 install bugswarm-client beautifulsoup4 lxml
 
 RUN sudo su thebesttv -c "cd ~/ && \
     git clone https://github.com/thebesttv/Static-Bug-Detectors-ASE-Artifact.git && \
