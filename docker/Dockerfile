@@ -14,6 +14,7 @@ RUN apt-get update && \
         openjdk-8-jdk maven ant \
         subversion git \
     && \
+    update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java && \
     curl -fsSL https://get.docker.com | sh -
 
 COPY init.sh /root/
