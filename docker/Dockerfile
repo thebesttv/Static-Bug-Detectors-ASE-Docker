@@ -20,6 +20,10 @@ RUN apt-get update && \
 COPY init.sh /root/
 RUN cd /root && bash init.sh && rm init.sh
 
+# useful bash aliases
+COPY aliases.sh /root/.bash_aliases
+COPY --chown=thebesttv aliases.sh /home/thebesttv/.bash_aliases
+
 # defects4j dependencies
 RUN apt-get update && apt-get -y install cpanminus && \
     cd /tmp && git clone https://github.com/rjust/defects4j.git && \
