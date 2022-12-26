@@ -1,6 +1,7 @@
 username=thebesttv
 
 service ssh restart
+service mysql start
 
 ################################################################
 # Docker

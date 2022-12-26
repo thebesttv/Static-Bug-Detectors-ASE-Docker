@@ -37,5 +37,12 @@ RUN sudo su thebesttv -c "cd ~/ && \
     cd Static-Bug-Detectors-ASE-Artifact && \
     bash analyzers/init_env.sh |& tee ~/log-init_env"
 
+# install database needed for parsing
+# https://github.com/ucd-plse/Static-Bug-Detectors-ASE-Artifact/pull/1/files
+RUN pip3 install PyMySQL && \
+    apt-get update && apt-get -y install mysql-server && \
+    service mysql start && \
+    echo "UPDATE mysql.user SET plugin = 'mysql_native_password' WHERE User = 'root'; FLUSH PRIVILEGES;" | mysql -u root
+
 COPY login.sh /root/
 ENTRYPOINT cd /root && bash login.sh && bash
